@@ -1,7 +1,16 @@
 <input type="text" [(ngModel)]="task">
 <button type="button" (click)="add()">Add to List</button>
 <ul>
-  <li *ngFor="let item of tasks">
+  <li *ngFor="let item of tasks" [innerHtml]="item">
     {{item}}
   </li>
 </ul>
+<br/>
+<!-- Se a variável for true, o texto não vai ser apresentado -->
+<div [hidden]="isAdmin">
+  Common User
+  </div>
+  
+  <div [hidden]="!isAdmin">
+  Administrator User
+  </div>
