@@ -17,4 +17,6 @@ export class AppComponent {
   upperText:string='Display';
   lowerText:string='Display';
   percentValue: number = 0.5;
+  isAdmin: boolean = true;
+  profile: number = 1;
 }
